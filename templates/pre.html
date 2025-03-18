@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precautions | Blood Cancer Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #FFE5D4, #FFF8E3);
+            color: #5A3E36;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+        }
+
+        .dropbtn {
+            background: #E17B60;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #5A3E36;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .dropdown-content a:hover {
+            background: #FFD3B6;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            color: #A45C40;
+        }
+
+        /* Precaution Boxes */
+        .precaution {
+            background: white;
+            color: #5A3E36;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #E17B60;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .btn:hover {
+            background: #D1624A;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropbtn">☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('index') }}">Detect Cancer</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('precautions') }}">Precautions</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Precautions for Blood Cancer</h2>
+
+        <div class="precaution">
+            <h3>Malignant</h3>
+            <p>✔ Follow a strict medical consultation schedule.</p>
+            <p>✔ Maintain a balanced diet rich in proteins and vitamins.</p>
+            <p>✔ Avoid exposure to harmful chemicals and radiation.</p>
+            <p>✔ Engage in mild physical activities to boost immunity.</p>
+        </div>
+
+        <div class="precaution">
+            <h3>Benign</h3>
+            <p>✔ Get regular health checkups to monitor any changes.</p>
+            <p>✔ Eat a nutrient-rich diet to prevent future complications.</p>
+            <p>✔ Stay hydrated and avoid excessive processed foods.</p>
+            <p>✔ Report any unusual symptoms to a healthcare professional.</p>
+        </div>
+
+        <a href="detect.html" class="btn">Upload Another Image</a>
+    </div>
+
+</body>
+</html>

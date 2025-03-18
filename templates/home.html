@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Cancer Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #FFD3B6, #FFF5E1); /* Soft Peach Gradient */
+            text-align: center;
+            padding: 20px;
+            color: #5A3E36; /* Warm Brown Text */
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Navbar with Glassmorphism */
+        nav {
+            background: rgba(255, 182, 160, 0.8); /* Light Coral */
+            padding: 12px 0;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #5A3E36; /* Warm Brown */
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            padding: 8px 16px;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 221, 181, 0.5); /* Soft Gold */
+            transform: scale(1.1);
+        }
+
+        /* Homepage Content */
+        .container {
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255, 240, 230, 0.8); /* Light Cream */
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            max-width: 600px;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #8B5E3C; /* Darker Peach */
+        }
+
+        .container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .btn {
+            background: #FFAD77; /* Soft Orange */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid #FF914D; /* Slightly Darker Orange */
+        }
+
+        .btn:hover {
+            background: #FF914D; /* Darker Peach */
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-20px); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Blood Cancer Detection</h1>
+        <p>Upload an image of a blood cell, and our AI model will classify it as benign or malignant.</p>
+        <a href="{{ url_for('index') }}" class="btn">Get Started</a>
+    </div>
+</body>
+</html>
